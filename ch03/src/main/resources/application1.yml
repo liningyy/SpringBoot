@@ -1,0 +1,57 @@
+#logging:
+#  level:
+#    root: debug
+#  file:
+#    name: 'E:\S6170\springboot\wl\springboot-study\ch03\log'
+#  logback:
+#   rollingpolicy:
+#     file-name-pattern: '${LOG_FILE}.%d{yyyy-MM-dd}.%i.log'
+#     max-file-size: 10MB
+#     max-history: 7
+
+# ???yml??
+# 1????????
+#student:
+# userId: 1
+# userName: 'user1'
+# age: 18
+
+# 2?????
+student:
+ user-id: 1
+ userName: 'user1'
+ age: 18
+# ?????array?list?set?
+ # ???????
+ tels: 21412312423,12421324232
+  # ?????? -
+  # - 21412312423
+  # - 12421324232
+ list:
+  - user1
+  - user2
+ # ??map??
+ score:
+  chinese: 90
+  english: 95
+ # ??????? map??
+ # score: {chinese: 90, english: 95}
+
+ # ?????????List<Teacher>?List<Map<String,Object>>
+ teachers:
+  - name: zs
+    age: 18
+  - name: ls
+    age: 20
+ # List<Map<String,Teacher>> teacherMap
+ teacherMap:
+  chinese:
+   name: zs
+   age: 30
+  english: {name: ls, age: 22}
+
+# ??????
+spring:
+ output:
+  ansi:
+   enabled: always

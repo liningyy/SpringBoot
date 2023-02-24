@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>聊天室</title>
+</head>
+<body>
+<h2>聊天室</h2>
+<div id="content">
+
+</div>
+<input type="text" id="message">
+<input type="button" value="发送">
+
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/sockjs.min.js"></script>
+<script type="text/javascript">
+  $(function (){
+    // 创建WebSocket对象，指定端点
+    let ws = new WebSocket('ws://localhost:8080/ws/connect');
+
+    // 使用sockjs来创建websocket对象，他可以兼容低版本的浏览器
+    // 如果浏览器不支持 ws ,那么sockjs将自动使用长连接的方式来实现消息的推送
+    // let ws = new SockJS("/connect")
+
+    // 接收服务端发送回来的消息
+    ws.onmessage = function (event) {
+      let message = $.parseJSON(event.data);
+      $('#content').append(
+              message.sendUser + " : " + message.date + '<br>' + message.message + '<br>'
+      );
+    }
+
+    // 绑定发送按钮
+    $(':button').click(function (){
+      // 获取发送的内容
+      let message = $('#message').val();
+      // 发送消息给服务器。
+      ws.send(message);
+      // 清空文本框
+      $('#message').val('');
+    })
+  })
+</script>
+</body>
+</html>

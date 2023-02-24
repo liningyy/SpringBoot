@@ -1,0 +1,5 @@
+# 生产环境配置
+student:
+  user-id: 1004
+  user-name: user4
+  age: 23

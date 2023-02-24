@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <!-- 引入springboot的默认logback的配置，用于输出彩色日志 -->
+    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+
+    <!-- 控制台 -->
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <!--<pattern>%d{yyyy-MM-dd HH:mm:ss} [%t] %p %C - %m%n</pattern>-->
+
+            <!-- 引用 springboot控制台的输出格式 -->
+            <pattern>${CONSOLE_LOG_PATTERN}</pattern>
+        </encoder>
+    </appender>
+
+    <!-- 文件 -->
+    <appender name="file" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!-- 配置滚动策略, TimeBasedRollingPolicy是最常用的滚动策略，它可以根据时间来定制生成不同的日志文件 -->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- 指定滚动深层的文件名（以日期作为文件名） -->
+            <fileNamePattern>ch02/log/%d{yyyy-MM-dd}.log</fileNamePattern>
+            <!-- 决定保留归档日志的最大数量, 这里设置为30表示只保留最近30天的日志文件-->
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <!-- 日志输出格式 -->
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%t] %p %C - %m%n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="info">
+        <appender-ref ref="console"/>
+        <appender-ref ref="file"/>
+    </root>
+</configuration>

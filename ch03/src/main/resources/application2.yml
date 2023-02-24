@@ -1,0 +1,36 @@
+# 多环境配置，在不同的环境下（开发环境，测试环境，生产环境）
+# 的配置参数是不一样的，因此可以在不同环境配置不同的参数
+# 在运行时可以激活某个环境配置即可，非常灵活
+
+# 多环境配置方式一、使用 “---” 分离不同的环境
+# 测试环境的配置
+student:
+  user-id: 1001
+  user-name: user1
+  age: 20
+spring:
+  .config:
+    activate:
+      # 测试环境的配置名称为 test
+      on-profile: test
+
+---
+# 生产环境配置
+student:
+  user-id: 1002
+  user-name: user2
+  age: 18
+spring:
+  config:
+    activate:
+      # 生产环境的配置名称为 prod
+      on-profile: prod
+
+---
+# 默认激活其中一个配置环境
+spring:
+  profiles:
+    active: prod
+  output:
+    ansi:
+      enabled: always

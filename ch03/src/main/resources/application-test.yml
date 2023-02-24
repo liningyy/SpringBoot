@@ -1,0 +1,33 @@
+# 测试环境配置
+student:
+  user-id: 1003
+  user-name: user3
+  age: 22
+
+#student:
+#  # userName/USERNAME 也可以
+#  user-id: 1001
+#  user-name: zs
+#  age: 18
+#  # 配置数组的第一种方式
+#  # tels: 1234567, 1231243
+#  # 配置数组的第二种方式
+#  tels:
+#    - 1234567
+#    - 1231243
+#  teachers:
+#    - name: user1
+#      age: 18
+#    - name: user2
+#      age: 19
+#  lists:
+#    - test1
+#    - test2
+#  maps:
+#    chinese: {name: 'zs', age: 30}
+#    english: {name: 'ls', age: 33}
+#    # 绑定map的第一种方式
+#  map: {chinese: 80, english: 90}
+#  # 绑定map的第二种方式
+##    - chinese: 80
+##    - english: 90

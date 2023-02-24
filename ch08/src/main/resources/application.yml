@@ -1,0 +1,9 @@
+spring:
+  elasticsearch:
+    # 指定连接主机的地址及端口
+    uris:
+      - http://127.0.0.1:9200
+    # 连接超时时间
+#    connection-timeout: 2s
+    # 账号密码
+

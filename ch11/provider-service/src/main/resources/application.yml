@@ -1,0 +1,17 @@
+spring:
+  # 应用程序名，也是dubbo的服务名
+  application:
+    # 默认读取 spring.application.name 作为注册中心的名字
+    name: provider-service
+dubbo:
+  # 采用的通信协议以及对外暴露的端口号
+  protocol:
+    name: dubbo
+    port: 20880
+  registry:
+    # 注册中心的访问协议
+    protocol: zookeeper
+    address: zookeeper://127.0.0.1:2181
+  # 扫描指定的包，找到服务注册到注册中心
+  scan:
+    base-packages: com.ming.provider.service.impl

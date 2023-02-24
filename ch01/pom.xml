@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <!-- 这个 parent 是Spring boot 的父级依赖，它提供了默认的Java的版本，UTF-8编码，
+     插件管理，以及Maven依赖管理等功能，因此在子模块中也要引入相关的starter的
+          时候,就不需要再指定版本号了-->
+    <!-- 简单点就是：springboot 做了依赖管理(dependencyManagement) -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.7.8</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <!-- 坐标 -->
+    <groupId>com.ming</groupId>
+    <artifactId>ch01</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <!-- 打包名称（ch01.jar） -->
+    <name>ch01</name>
+    <description>ch01</description>
+    <!-- 属性配置 -->
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
+    <dependencies>
+        <!-- springBoot 核心依赖 （核心启动器），它包含了起步依赖，
+         自动化配置、日志(logback)、YAML配置等功能-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+
+        <!-- springBoot 单元测试模块，从spring boot2.2 开始默认情况下集成的是 Junit5 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <!-- spring boot的maven插件，主要用于将spring boot 应用打成相应的 jar包或者 war包 -->
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>2.7.5</version>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

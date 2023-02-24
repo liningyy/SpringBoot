@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+org.c3p0.spring.boot.autoconfigure.Cep0DataSourceAutoConfigure

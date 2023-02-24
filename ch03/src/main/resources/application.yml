@@ -1,0 +1,18 @@
+# 多环节配置方式二：使用多个配置文件来区分不同的环境。
+# 多个配置文件的命令要遵循相关的约定，如：appliation-xxx
+# 必须以 “application-”开头，xxx表示环境名称
+# 主配置文件（application.yml）用于激活配置
+spring:
+#  profiles:
+    # 激活某个环境配置
+#    active: prod
+    # 包含其他模块的配置文件(多模块配置)，包含时只需要指定 xxx 名称即可
+#    include: web, dao
+  output:
+    ansi:
+      enabled: always
+#  config:
+#    import: application-dao.yml, application-web.yml
+
+# 也可以在运行 jar 文件的时候来激活某个环境配置
+# java -jar xxx.jar -- spring.profiles.active=test

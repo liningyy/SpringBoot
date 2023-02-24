@@ -1,0 +1,19 @@
+spring:
+  # 开启彩色日志
+  output:
+    ansi:
+      enabled: always
+  # 导入dao以及mvc yml文件
+  profiles:
+    include:
+      - dao
+      - mvc
+# 扫描controller生产对应的文档说明
+springdoc:
+  packages-to-scan: com.ming.city.controller
+  # 开发的时候设置为true，测试的时候设置为false
+  api-docs:
+    enabled: true
+
+server:
+  port: 8888

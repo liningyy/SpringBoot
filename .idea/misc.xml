@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/ch01/pom.xml" />
+        <option value="$PROJECT_DIR$/ch02/pom.xml" />
+        <option value="$PROJECT_DIR$/ch03/pom.xml" />
+        <option value="$PROJECT_DIR$/ch04/pom.xml" />
+        <option value="$PROJECT_DIR$/ch05/pom.xml" />
+        <option value="$PROJECT_DIR$/city/pom.xml" />
+        <option value="$PROJECT_DIR$/ch06/pom.xml" />
+        <option value="$PROJECT_DIR$/c3p0-spring-boot-starter/pom.xml" />
+        <option value="$PROJECT_DIR$/test/pom.xml" />
+        <option value="$PROJECT_DIR$/ch07/pom.xml" />
+        <option value="$PROJECT_DIR$/ch08/pom.xml" />
+        <option value="$PROJECT_DIR$/ch09/pom.xml" />
+        <option value="$PROJECT_DIR$/ch10/pom.xml" />
+        <option value="$PROJECT_DIR$/ch11/pom.xml" />
+        <option value="$PROJECT_DIR$/ch11/provider-service/pom.xml" />
+        <option value="$PROJECT_DIR$/ch11/consumer-service/pom.xml" />
+        <option value="$PROJECT_DIR$/ch12/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_19" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

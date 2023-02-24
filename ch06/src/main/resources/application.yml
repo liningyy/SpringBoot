@@ -1,0 +1,46 @@
+server:
+  # 端口设置
+  port: 8081
+  # 项目访问的上下路径
+  servlet:
+    context-path: /ch06
+    # 配置字符编码过滤器
+    encoding:
+      # 启用字符编码过滤器
+      enabled: true
+      charset: UTF-8
+      force: true
+ # 异常页面设置
+  error:
+    # 启用或禁用 springboot 的错误页面
+    # 也可以自定义错误页面，要求在约定的静态资源目录下
+    # 创建 error 子目录（static|public/error/xxx.html），再创建响应的错误页面即可（404.html）
+    # 注意：自定义错误页面的优先级别要比默认的高
+    whitelabel:
+      enabled: false
+    # 当产生错误后，执行这个请求地址来转到错误信息，默认值 “/error”
+    #path: /xxxx
+spring:
+  # 自定义静态资源的目录
+#  web:
+#    resources:
+      # 配置多个自己的目录可以这样写（逗号隔开）：classpath:aa, classpath:aa
+#      static-locations: classpath:aa
+  # jackson配置
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+    #启用Servlet文件上传
+  servlet:
+    multipart:
+      enabled: true
+      # 设置每个文件的大小
+      max-file-size: 10MB
+      # 现在单次请求上传的所有文件总大小
+      max-request-size: 100MB
+springdoc:
+  # 在开发环境下设置为true，生产环境下设置为false
+  api-docs:
+    enabled: true
+  # 扫描需要生产api文档的包
+  packages-to-scan: com.ming.ch06.controller.api

@@ -1,0 +1,23 @@
+spring:
+  redis:
+    url: localhost
+    port: 6379
+    password: 123456
+    database: 0
+    timeout: 3000
+#    # lettuce 客户端配置
+#    lettuce:
+#      pool:
+#        # 启用或禁用连接池 true 启用 false 禁用
+#        enabled: false
+#        # 最大连接数
+#        max-active: 10
+        # 最大空闲连接数
+#        max-idle: 8
+#        # 最小空闲连接
+#        min-idle: 5
+#        # 建立连接的最大等待时间
+#        max-wait: 2000
+#        # 间隔多少毫秒允许一次空闲连接的回收
+#        time-between-eviction-runs: 60000
+
