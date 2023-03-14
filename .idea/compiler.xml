@@ -23,6 +23,7 @@
         <module name="consumer-service" />
         <module name="c3p0-spring-boot-starter" />
         <module name="service-api" />
+        <module name="redis-geo-demo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -51,6 +52,7 @@
       <module name="provider-service" options="-parameters" />
       <module name="provider-service (1)" options="-parameters" />
       <module name="provider-service (2)" options="-parameters" />
+      <module name="redis-geo-demo" options="-parameters" />
       <module name="service-api" options="-parameters" />
     </option>
   </component>

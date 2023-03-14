@@ -21,6 +21,7 @@
         <option value="$PROJECT_DIR$/ch11/provider-service/pom.xml" />
         <option value="$PROJECT_DIR$/ch11/consumer-service/pom.xml" />
         <option value="$PROJECT_DIR$/ch12/pom.xml" />
+        <option value="$PROJECT_DIR$/redis-geo-demo/pom.xml" />
       </list>
     </option>
   </component>
